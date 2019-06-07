@@ -26,7 +26,7 @@ $(document).ready(function(){
 
         for(let i= 0; i<body.data.length; i++)
         {
-          $('.showDoctor').append("<li>" + body.data[i].profile.first_name + " " + body.data[i].profile.last_name +"</li>");
+          $('.showDoctor').append("<li>" + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + " "+ body.data[i].practices[0].accepts_new_patients + " "+ body.data[i].practices[0].phones[0].number + "</li>");
         }
       }
       else {
