@@ -11,14 +11,11 @@ $(document).ready(function(){
 
     let name = $('.name').val();
     let issue = $('.issue').val();
-    console.log(name + issue);
-
-
     let doctor = new Doctor();
     let promise = doctor.finddoctor(name,issue);
     promise.then(function(response){
       let body = JSON.parse(response);
-      console.log(body);
+  
 
       if(body.data.length>0)
       {
@@ -33,10 +30,10 @@ $(document).ready(function(){
         }
       }
       else {
-        $('.showDoctor').text('Sorry,Mike!');
+        $('.showDoctor').text('Sorry,there are no doctors meeting your criteria!');
       }
     }, function (error){
-      $('.showErrors').text('There was an error processing your request: ${error.message}');
+      $('.showDoctor').text('There was an error processing your request: ' + error);
     }
     );
 

@@ -20,7 +20,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Ping Pong',
+      title: '',
       template: './src/index.html',
       inject: 'body'
     }),
