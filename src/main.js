@@ -15,7 +15,7 @@ $(document).ready(function(){
     let promise = doctor.finddoctor(name,issue);
     promise.then(function(response){
       let body = JSON.parse(response);
-  
+
 
       if(body.data.length>0)
       {
@@ -23,10 +23,12 @@ $(document).ready(function(){
 
         for(let i= 0; i<body.data.length; i++)
         {
-          $('.showDoctor').append("<li>" + body.data[i].profile.first_name + " " +
-           body.data[i].profile.last_name + " "+ body.data[i].practices[0].accepts_new_patients
-            + " "+ body.data[i].practices[0].phones[0].number + " "+ body.data[i].practices[0].website
-            + " " + body.data[i].practices[0].visit_address.street + "</li>");
+          $('.showDoctor').append("<ul>"  +
+          "<li>"+"Doctor's name: " + body.data[i].profile.first_name + " " +body.data[i].profile.last_name + "</li>" +
+          "<li>" + "Doctor accepts new patients: " + body.data[i].practices[0].accepts_new_patients + "</li>"+
+          "<li>" + "Phone number is: " + body.data[i].practices[0].phones[0].number + "</li>"+
+          "<li>" + "Website:" + body.data[i].practices[0].website+ "</li>" +
+          "<li>" + "Address: " + body.data[i].practices[0].visit_address.street + "</li>" + "</ul>");
         }
       }
       else {
