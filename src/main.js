@@ -26,7 +26,10 @@ $(document).ready(function(){
 
         for(let i= 0; i<body.data.length; i++)
         {
-          $('.showDoctor').append("<li>" + body.data[i].profile.first_name + " " + body.data[i].profile.last_name + " "+ body.data[i].practices[0].accepts_new_patients + " "+ body.data[i].practices[0].phones[0].number + "</li>");
+          $('.showDoctor').append("<li>" + body.data[i].profile.first_name + " " +
+           body.data[i].profile.last_name + " "+ body.data[i].practices[0].accepts_new_patients
+            + " "+ body.data[i].practices[0].phones[0].number + " "+ body.data[i].practices[0].website
+            + " " + body.data[i].practices[0].visit_address.street + "</li>");
         }
       }
       else {
