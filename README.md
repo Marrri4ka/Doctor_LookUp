@@ -3,7 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/made-with-javascript.svg)](http://forthebadge.com)
 
 
-## App  list all the bikes that have been registered as stolen in a given location in the past week.
+## 🚑 Website where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue. 
 
 ****
 
